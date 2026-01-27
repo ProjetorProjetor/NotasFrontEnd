@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "nome": "Alberto",
+    "disciplinas": [
+      { "nome": "Matemática", "v1": 7, "v2": 10, "v3": 9 },
+      { "nome": "Português", "v1": 6, "v2": 7, "v3": 10 },
+      { "nome": "História", "v1": 8, "v2": 9, "v3": 8 }
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "Bruno",
+    "disciplinas": [
+      { "nome": "Matemática", "v1": 9, "v2": 10, "v3": 4 },
+      { "nome": "Português", "v1": 9, "v2": 9, "v3": 8 },
+      { "nome": "História", "v1": 8, "v2": 7, "v3": 7 }
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "Carla",
+    "disciplinas": [
+      { "nome": "Matemática", "v1": 8, "v2": 6, "v3": 7 },
+      { "nome": "Português", "v1": 7, "v2": 8, "v3": 9 },
+      { "nome": "História", "v1": 4, "v2": 9, "v3": 10 }
+    ]
+  }
+]
