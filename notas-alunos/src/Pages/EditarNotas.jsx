@@ -24,40 +24,65 @@ export default function EditarNotas() {
 
   return (
     <div className="p-6">
-      <h1 className="text-xl font-bold mb-4">
+      <h1 className="text-7xl font-bold mb-6">
         Editar notas – {aluno.nome}
       </h1>
 
       {disciplinas.map((d, index) => (
-        <div key={index} className="mb-4">
-          <h2 className="font-semibold mb-2">{d.nome}</h2>
+        <div key={index} className="mb-2">
+          <h2 className="text-2xl font-bold mb-3">{d.nome} (V1/V2/V3)</h2>
 
-          <div className="flex gap-2">
+          <div className="flex gap-4">
             <input
-              type="number"
-              value={d.v1}
-              onChange={e => alterarNota(index, "v1", e.target.value)}
-              className="w-20 p-1 text-black"
-            />
+            type="number"
+            min="0"
+            max="10"
+            step="0.1"
+            value={d.v1}
+            onChange={(e) => {
+              let valor = Number(e.target.value)
+              if (valor < 0) valor = 0
+              if (valor > 10) valor = 10
+              valor = valor.toFixed(1)
+              alterarNota(index, "v1", valor)
+  }} className="w-20 p-1 text-black bg-white border-2 border-blue-700 rounded-md"
+/>
+
             <input
-              type="number"
-              value={d.v2}
-              onChange={e => alterarNota(index, "v2", e.target.value)}
-              className="w-20 p-1 text-black"
-            />
+            type="number"
+            min="0"
+            max="10"
+            step="0.1"
+            value={d.v2}
+            onChange={(e) => {
+              let valor = Number(e.target.value)
+              if (valor < 0) valor = 0
+              if (valor > 10) valor = 10
+              valor = valor.toFixed(1)
+              alterarNota(index, "v2", valor)
+  }} className="w-20 p-1 text-black bg-white border-2 border-blue-700 rounded-md"
+/>
             <input
-              type="number"
-              value={d.v3}
-              onChange={e => alterarNota(index, "v3", e.target.value)}
-              className="w-20 p-1 text-black"
-            />
+            type="number"
+            min="0"
+            max="10"
+            step="0.1"
+            value={d.v3}
+            onChange={(e) => {
+              let valor = Number(e.target.value)
+              if (valor < 0) valor = 0
+              if (valor > 10) valor = 10
+              valor = valor.toFixed(1)
+              alterarNota(index, "v3", valor)
+  }} className="w-20 p-1 text-black bg-white border-2 border-blue-700 rounded-md"
+/>
           </div>
         </div>
       ))}
 
       <button
         onClick={salvar}
-        className="bg-green-600 px-4 py-2 rounded hover:bg-green-700"
+        className="bg-green-800 px-4 py-2 rounded-md hover:bg-green-700"
       >
         Salvar
       </button>
