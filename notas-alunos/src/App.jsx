@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Inicio from "./Pages/Inicio.jsx"
 import Aluno from "./Pages/Aluno.jsx"
 import EditarNotas from "./Pages/EditarNotas.jsx"
-
+// rotas do app
 function App() {
   return (
     <BrowserRouter>
